@@ -1,0 +1,2442 @@
+                                        @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+                                        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+                                        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+                                        * {
+                                            padding: 0px;
+                                            margin: 0px;
+                                            box-sizing: border-box;
+                                        }
+                                        
+                                        body {
+                                            font-family: 'Rubik', sans-serif;
+                                            background: #222222;
+                                        }
+                                        
+                                        .container {
+                                            width: 1140px;
+                                            margin: auto;
+                                        }
+                                        
+                                        a {
+                                            text-decoration: none;
+                                        }
+                                        /* todo: CUSTOM SCROLL BAR START; */
+                                        
+                                         ::-webkit-scrollbar {
+                                            width: 12px;
+                                        }
+                                        
+                                         ::-webkit-scrollbar-thumb,
+                                         ::-webkit-scrollbar-thumb:window-inactive {
+                                            background: #F03353;
+                                        }
+                                        
+                                         ::-webkit-scrollbar-thumb {
+                                            box-shadow: inset 0 0 6px rgb(0 0 0 / 50%);
+                                            -webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 50%);
+                                        }
+                                        
+                                         ::-webkit-scrollbar-track {
+                                            box-shadow: inset 0 0 6px rgb(255 255 255 / 30%);
+                                            -webkit-box-shadow: inset 0 0 6px rgb(255 255 255 / 30%);
+                                            background: #484848;
+                                        }
+                                        /* todo: CUSTOM SCROLL BAR END; */
+                                        /* todo: EMAIL VALIDATION CHECK START; */
+                                        
+                                        #sec1 {
+                                            padding-top: 50px;
+                                        }
+                                        
+                                        .EmailValid {
+                                            width: 400px;
+                                            background: #DBDBDB;
+                                            margin: auto;
+                                            border-radius: 3px;
+                                            padding: 50px 30px;
+                                        }
+                                        
+                                        .EmailValid h5 {
+                                            text-transform: capitalize;
+                                            text-align: center;
+                                            font-size: 16px;
+                                            color: #FF5200;
+                                            padding: 15px 0px;
+                                            text-decoration: underline 2px dashed;
+                                        }
+                                        
+                                        .EmailValid b {
+                                            display: block;
+                                        }
+                                        
+                                        .validMail {
+                                            text-transform: lowercase;
+                                            border: none;
+                                            border-radius: 7px;
+                                            outline: none;
+                                            color: #000000;
+                                            background: #FFFFFF;
+                                            padding-left: 15px;
+                                            padding-top: 15px;
+                                            padding-bottom: 15px;
+                                            width: 80%;
+                                            margin-top: 10px;
+                                            font-family: 'Rubik', sans-serif;
+                                        }
+                                        
+                                        #validMailIcon {
+                                            height: 50px;
+                                            float: right;
+                                            position: relative;
+                                            padding-top: 21px;
+                                            left: -38px;
+                                            font-size: 20px;
+                                        }
+                                        
+                                        #mailError {
+                                            text-transform: capitalize;
+                                            font-size: 14px;
+                                            display: none;
+                                            color: #FF2851;
+                                            margin-top: 10px;
+                                        }
+                                        /* todo: EMAIL VALIDATION CHECK END; */
+                                        /* todo: SHOW PASSWORD START; */
+                                        
+                                        #sec2 {
+                                            padding-top: 100px;
+                                        }
+                                        
+                                        .passShow {
+                                            width: 400px;
+                                            background: #4a884a;
+                                            margin: auto;
+                                            border-radius: 3px;
+                                            padding: 50px 30px;
+                                        }
+                                        
+                                        .passShow h5 {
+                                            text-transform: capitalize;
+                                            text-align: center;
+                                            font-size: 16px;
+                                            color: #EEEEEE;
+                                            padding: 15px 0px;
+                                            text-decoration: underline 2px dashed;
+                                        }
+                                        
+                                        .passShow b {
+                                            display: block;
+                                            text-transform: capitalize;
+                                        }
+                                        
+                                        .showPassWrapper {
+                                            position: relative;
+                                        }
+                                        
+                                        .hideShowPass {
+                                            border: none;
+                                            border-radius: 7px;
+                                            outline: none;
+                                            color: #FFFFFF;
+                                            background: #000000;
+                                            padding-left: 40px;
+                                            padding-top: 15px;
+                                            padding-bottom: 15px;
+                                            width: 90%;
+                                            margin-top: 10px;
+                                            font-family: 'Rubik', sans-serif;
+                                        }
+                                        
+                                        #showPassLock {
+                                            position: absolute;
+                                            top: 22px;
+                                            left: 8px;
+                                            background: transparent;
+                                            color: #DBDBDB;
+                                            font-size: 22px;
+                                        }
+                                        
+                                        .passShowIcon {
+                                            height: 28px;
+                                            background: #000000;
+                                            width: 27px;
+                                            text-align: center;
+                                            font-size: 20px;
+                                            border-radius: 50%;
+                                            padding: 2px 0px;
+                                            position: absolute;
+                                            top: 19px;
+                                            left: 80%;
+                                            cursor: pointer;
+                                            color: #FFFFFF;
+                                        }
+                                        /* todo: SHOW PASSWORD END; */
+                                        /* todo: PASSWORD === CONFIRM PASSWORD START; */
+                                        
+                                        #sec3 {
+                                            padding-top: 100px;
+                                            padding-bottom: 50px;
+                                        }
+                                        
+                                        .passConPass {
+                                            width: 400px;
+                                            background: #F2E1C1;
+                                            margin: auto;
+                                            border-radius: 3px;
+                                            padding: 50px 30px;
+                                        }
+                                        
+                                        .passConPass h5 {
+                                            text-transform: capitalize;
+                                            text-align: center;
+                                            font-size: 16px;
+                                            color: #111111;
+                                            padding: 15px 0px;
+                                            text-decoration: underline 2px dashed;
+                                        }
+                                        
+                                        .passConPass b {
+                                            display: block;
+                                            text-transform: capitalize;
+                                        }
+                                        
+                                        .passConWrapper {
+                                            position: relative;
+                                        }
+                                        
+                                        .pass,
+                                        .conPass {
+                                            border: none;
+                                            border-radius: 15px;
+                                            outline: none;
+                                            color: #50CB93;
+                                            background: #171010;
+                                            padding-left: 40px;
+                                            padding-top: 15px;
+                                            padding-bottom: 15px;
+                                            width: 90%;
+                                            margin-top: 10px;
+                                            font-family: 'Rubik', sans-serif;
+                                        }
+                                        
+                                        .pass {
+                                            margin-bottom: 15px;
+                                        }
+                                        
+                                        #passLock {
+                                            position: absolute;
+                                            top: 41px;
+                                            left: 8px;
+                                            background: transparent;
+                                            color: #D83A56;
+                                            font-size: 22px;
+                                        }
+                                        
+                                        #conPassLock {
+                                            position: absolute;
+                                            top: 130px;
+                                            left: 8px;
+                                            background: transparent;
+                                            color: #D83A56;
+                                            font-size: 22px;
+                                        }
+                                        
+                                        .conPassError {
+                                            font-size: 15px;
+                                            text-transform: capitalize;
+                                            /* ! width Will be Auto as text */
+                                            margin: 15px 0px;
+                                            padding: 5px 10px;
+                                            border-radius: 3px;
+                                            color: #FFFFFF;
+                                            display: none;
+                                        }
+                                        
+                                        .conPassButton {
+                                            border: none;
+                                            outline: none;
+                                            text-transform: uppercase;
+                                            margin-top: 25px;
+                                            padding: 15px 10px;
+                                            border-radius: 5px;
+                                            font-size: 14px;
+                                            font-weight: bold;
+                                            font-family: arial;
+                                            display: block;
+                                            background: linear-gradient( 150deg, #A239EA, #66DE93);
+                                            color: #FFFFFF;
+                                            margin-left: 34%;
+                                            cursor: pointer;
+                                        }
+                                        /* todo: PASSWORD === CONFIRM PASSWORD END; */
+                                        /* todo: CURRENT DATE START; */
+                                        
+                                        #sec4 {
+                                            padding: 50px 0px;
+                                        }
+                                        
+                                        .dateWrapper {
+                                            width: 400px;
+                                            background: #DBDBDB;
+                                            margin: auto;
+                                            border-radius: 3px;
+                                            padding: 50px 30px;
+                                            text-align: center;
+                                        }
+                                        
+                                        .dateWrapper p {
+                                            text-transform: capitalize;
+                                            padding: 15px 0px;
+                                            font-size: 16px;
+                                        }
+                                        
+                                        .dateWrapper h4 {
+                                            font-size: 20px;
+                                            color: #F03353;
+                                        }
+                                        
+                                        .dateDay {
+                                            text-transform: uppercase !important;
+                                            font-family: arial black;
+                                            color: #000000 !important;
+                                            padding: 15px 0px 0px 0px !important;
+                                            cursor: pointer;
+                                        }
+                                        /* todo: CURRENT DATE END; */
+                                        /* todo: CURRENT TIME START; */
+                                        
+                                        #sec5 {
+                                            padding: 50px 0px;
+                                        }
+                                        
+                                        .timeWrapper {
+                                            width: 400px;
+                                            background: #ffffff0f;
+                                            margin: auto;
+                                            border: 1.5px solid#ffffff0f;
+                                            border-radius: 5px;
+                                            padding: 50px 30px;
+                                            text-align: center;
+                                            position: relative;
+                                        }
+                                        
+                                        .shapple1 {
+                                            height: 250px;
+                                            width: 250px;
+                                            border-radius: 50%;
+                                            position: absolute;
+                                            background: linear-gradient(135deg, #FF5B84, #EB3461);
+                                            z-index: -1;
+                                            bottom: 60px;
+                                            right: -70px;
+                                        }
+                                        
+                                        .shapple2 {
+                                            height: 250px;
+                                            width: 250px;
+                                            border-radius: 50%;
+                                            position: absolute;
+                                            background: linear-gradient(135deg, #426CF8, #3EBDF0);
+                                            z-index: -1;
+                                            top: 60px;
+                                            left: -70px;
+                                        }
+                                        
+                                        .timeWrapper p {
+                                            text-transform: capitalize;
+                                            padding: 15px 0px;
+                                            font-size: 16px;
+                                            color: #FFFFFF;
+                                        }
+                                        
+                                        .time {
+                                            font-size: 30px;
+                                            color: #FFFFFF;
+                                            margin-left: 26px;
+                                            cursor: pointer;
+                                        }
+                                        
+                                        .midday {
+                                            font-size: 18px;
+                                            color: #FFFFFF;
+                                            cursor: pointer;
+                                        }
+                                        
+                                        .time,
+                                        .midday {
+                                            display: inline-block;
+                                        }
+                                        /* todo: CURRENT TIME END; */
+                                        /* todo: COUNT UP START; */
+                                        
+                                        #sec6 {
+                                            padding: 50px 0px;
+                                        }
+                                        
+                                        .countUpWrapper {
+                                            width: 400px;
+                                            margin: auto;
+                                            border-radius: 5px;
+                                            background: #F03353;
+                                            padding: 50px 30px;
+                                            text-align: center;
+                                        }
+                                        
+                                        .countUpWrapper h3 {
+                                            font-size: 20px;
+                                            text-transform: capitalize;
+                                            color: #000000;
+                                            padding: 15px 0px 0px 0px;
+                                        }
+                                        
+                                        .countUpWrapper p {
+                                            font-size: 30px;
+                                            color: #FFFFFF;
+                                            padding: 15px 0px 0px 0px;
+                                        }
+                                        /* todo: COUNT UP END; */
+                                        /* todo: COUNT DOWN START; */
+                                        
+                                        #sec7 {
+                                            padding: 50px 0px;
+                                        }
+                                        
+                                        .countDownWrapper {
+                                            width: 400px;
+                                            margin: auto;
+                                            border-radius: 5px;
+                                            background: #426CF8;
+                                            padding: 50px 30px;
+                                            text-align: center;
+                                        }
+                                        
+                                        .countDownWrapper h3 {
+                                            font-size: 20px;
+                                            text-transform: capitalize;
+                                            color: #FFFFFF;
+                                            padding: 15px 0px 0px 0px;
+                                        }
+                                        
+                                        .countDownWrapper p {
+                                            font-size: 30px;
+                                            color: #000000;
+                                            padding: 15px 0px 0px 0px;
+                                        }
+                                        /* todo: COUNT DOWN END; */
+                                        /* todo: CARD RADIO BUTTON START; */
+                                        
+                                        #sec8 {
+                                            padding: 50px 0px;
+                                        }
+                                        
+                                        .cardWrapper {
+                                            width: 75%;
+                                            border-radius: 5px;
+                                            margin: auto;
+                                            text-align: center;
+                                            background: #FFFFFF;
+                                            padding: 15px 0px;
+                                            overflow: hidden;
+                                        }
+                                        
+                                        .cardWrapper div:first-child {
+                                            margin-left: 118px;
+                                        }
+                                        
+                                        .card {
+                                            height: 150px;
+                                            width: 200px;
+                                            color: #FFFFFF;
+                                            position: relative;
+                                            float: left;
+                                            margin-right: 20px;
+                                        }
+                                        
+                                        .card input {
+                                            -webkit-appearance: none;
+                                            appearance: none;
+                                            background: #000000;
+                                            height: 100%;
+                                            width: 100%;
+                                            border-radius: 10px;
+                                            box-shadow: 7px 7px 15px #131212e0;
+                                            cursor: pointer;
+                                            outline: none;
+                                        }
+                                        
+                                        .card input::before {
+                                            content: "";
+                                            height: 21px;
+                                            width: 21px;
+                                            background: #F9FAFD;
+                                            border: 1px solid#E2E6F3;
+                                            border-radius: 50%;
+                                            position: absolute;
+                                            top: 35px;
+                                            right: 20px;
+                                        }
+                                        
+                                        .card input::after {
+                                            content: "";
+                                            height: 14px;
+                                            width: 14px;
+                                            background: transparent;
+                                            border-radius: 50%;
+                                            position: absolute;
+                                            top: 39.5px;
+                                            right: 24.1px;
+                                        }
+                                        
+                                        .cardTxt {
+                                            position: absolute;
+                                            top: 35px;
+                                            left: 13px;
+                                            width: 85%;
+                                            cursor: pointer;
+                                        }
+                                        
+                                        .cardTxt h5 {
+                                            text-transform: uppercase;
+                                            padding: 10px 0px;
+                                            font-size: 16px;
+                                        }
+                                        
+                                        .cardTxt h2 {
+                                            padding: 15px 0px;
+                                        }
+                                        
+                                        .card input:checked {
+                                            border: 3px solid#FF4500;
+                                        }
+                                        
+                                        .card input:checked::after {
+                                            background: #FF4500;
+                                        }
+                                        /* todo: CARD RADIO BUTTON END; */
+                                        /* todo: CARD HOVER EFFECT START; */
+                                        
+                                        #sec9 {
+                                            padding: 50px 0px;
+                                        }
+                                        
+                                        .cardHoverWrapper {
+                                            width: 90%;
+                                            margin: auto;
+                                        }
+                                        
+                                        .cardH {
+                                            display: block;
+                                            width: 300px;
+                                            position: relative;
+                                            background: #FFFFFF;
+                                            border-radius: 4px;
+                                            padding: 32px 24px;
+                                            margin-bottom: 12px;
+                                            z-index: 0;
+                                            overflow: hidden;
+                                            box-shadow: 0px 4px 8px #26262633;
+                                            float: left;
+                                            margin-left: 30px;
+                                            cursor: pointer;
+                                        }
+                                        
+                                        .cardH::before {
+                                            content: "";
+                                            position: absolute;
+                                            z-index: -1;
+                                            top: -16px;
+                                            right: -16px;
+                                            background: #5727CD;
+                                            width: 32px;
+                                            height: 32px;
+                                            border-radius: 32px;
+                                            transform: scale(1);
+                                            transform-origin: 50% 50%;
+                                            transition: 0.5s ease-in-out;
+                                        }
+                                        
+                                        .cardH:hover::before {
+                                            transform: scale(30);
+                                        }
+                                        
+                                        .cardH h3 {
+                                            color: #262626;
+                                            text-transform: capitalize;
+                                            line-height: 24px;
+                                            font-weight: 700;
+                                            margin-bottom: 10px;
+                                            transition: 0.5s ease-in-out;
+                                            text-align: center;
+                                        }
+                                        
+                                        .cardH p {
+                                            color: #666666;
+                                            width: 90%;
+                                            font-size: 14px;
+                                            line-height: 20px;
+                                            font-weight: 400;
+                                            transition: 0.5s ease-in-out;
+                                            text-align: justify;
+                                        }
+                                        
+                                        .cardH:hover h3 {
+                                            color: #FFFFFF;
+                                        }
+                                        
+                                        .cardH:hover p {
+                                            color: #DCDCDC;
+                                        }
+                                        
+                                        .go_corner {
+                                            position: absolute;
+                                            top: 0px;
+                                            right: 0px;
+                                            width: 32px;
+                                            height: 32px;
+                                            overflow: hidden;
+                                            background: #5727CD;
+                                            border-radius: 0px 4px 0px 32px;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                        }
+                                        
+                                        .go_corner i {
+                                            margin-top: -4px;
+                                            margin-right: -4px;
+                                            color: #FFFFFF;
+                                            font-size: 20px;
+                                        }
+                                        /* todo: CARD HOVER EFFECT END; */
+                                        /* todo: PASSWORD STRENGTH START; */
+                                        
+                                        #sec10 {
+                                            padding-top: 205px;
+                                            padding-bottom: 50px;
+                                        }
+                                        
+                                        .strhWrapper {
+                                            width: 400px;
+                                            margin: auto;
+                                            border-radius: 5px;
+                                            background: #000000;
+                                            padding: 50px 30px;
+                                        }
+                                        
+                                        .strhWrapper h5 {
+                                            text-align: center;
+                                            color: #F9FAFD;
+                                            font-size: 19px;
+                                            text-transform: capitalize;
+                                            padding: 20px 0px;
+                                        }
+                                        
+                                        .strhWrapper b {
+                                            color: #F2E1C1;
+                                            font-size: 15px;
+                                            text-transform: capitalize;
+                                            margin-left: 5px;
+                                        }
+                                        
+                                        .strPass {
+                                            background: #DCDCDC;
+                                            width: 85%;
+                                            padding: 10px 0px 10px 15px;
+                                            margin-top: 18px;
+                                            border: none;
+                                            border-radius: 7px 7px 0px 0px;
+                                            outline: none;
+                                            font-size: 15px;
+                                            font-family: 'Rubik', sans-serif;
+                                        }
+                                        
+                                        .strShow {
+                                            width: 28px;
+                                            height: 24px;
+                                            position: relative;
+                                            top: -27px;
+                                            left: 75%;
+                                            z-index: 1;
+                                            background: #DCDCDC;
+                                            text-align: center;
+                                            border-radius: 50%;
+                                        }
+                                        
+                                        #strShowIcon {
+                                            font-size: 20px;
+                                            cursor: pointer;
+                                            color: #000000;
+                                            transition: 0.3s;
+                                        }
+                                        
+                                        .str {
+                                            height: 10px;
+                                            position: relative;
+                                            border-radius: 0px 0px 5px 5px;
+                                            background: #e2eff5;
+                                            width: 85%;
+                                            top: -24px;
+                                        }
+                                        
+                                        .strErr {
+                                            color: #000000;
+                                            font-size: 18px;
+                                            display: inline-block;
+                                            border-radius: 3px;
+                                            cursor: pointer;
+                                            padding: 0px 5px;
+                                        }
+                                        
+                                        .strength {
+                                            width: 25%;
+                                            display: inline-block;
+                                            position: relative;
+                                            height: 100%;
+                                            bottom: 5px;
+                                        }
+                                        /* todo: PASSWORD STRENGTH END; */
+                                        /* todo: TIMER / COUNTDOWN START; */
+                                        
+                                        #sec11 {
+                                            padding: 50px 0px;
+                                        }
+                                        
+                                        .timerWrapper {
+                                            width: 600px;
+                                            margin: auto;
+                                            border-radius: 100px 5px;
+                                            background: #F03353;
+                                            padding: 75px 30px;
+                                        }
+                                        
+                                        .timerWrapper h4 {
+                                            text-align: center;
+                                            font-size: 16px;
+                                            color: #FFFFFF;
+                                            text-transform: uppercase;
+                                        }
+                                        
+                                        .timer {
+                                            width: 85%;
+                                            margin: auto;
+                                            align-items: center;
+                                            padding: 30px 0px 15px 0px;
+                                        }
+                                        
+                                        .timer div {
+                                            width: 100px;
+                                            text-align: center;
+                                            color: #e2eff5;
+                                            background: #222222;
+                                            padding: 10px 10px;
+                                            margin-left: 10px;
+                                            float: left;
+                                            border-radius: 5px;
+                                            cursor: pointer;
+                                            line-height: 20px;
+                                            text-transform: uppercase;
+                                        }
+                                        
+                                        .timer div:last-child {
+                                            color: #F03353;
+                                        }
+                                        /* todo: TIMER / COUNTDOWN END; */
+                                        /* todo: CUSTOM CHECKBOX START; */
+                                        
+                                        #sec12 {
+                                            padding: 50px 0px;
+                                        }
+                                        
+                                        .checkWrapper {
+                                            width: 600px;
+                                            margin: auto;
+                                            border-radius: 5px;
+                                            background: #5727CD;
+                                            padding: 50px 15px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: space-around;
+                                            flex-wrap: wrap;
+                                            gap: 20px;
+                                        }
+                                        
+                                        .tile {
+                                            height: 200px;
+                                            width: 170px;
+                                            position: relative;
+                                        }
+                                        
+                                        .tile input {
+                                            -webkit-appearance: none;
+                                            appearance: none;
+                                            position: relative;
+                                            height: 100%;
+                                            width: 100%;
+                                            background: #FFFFFF;
+                                            border-radius: 10px;
+                                            box-shadow: 15px 15px 25px rgba(2, 28, 53, 0.05);
+                                            cursor: pointer;
+                                            border: 3px solid transparent;
+                                            outline: none;
+                                            transition: 0.3s;
+                                        }
+                                        
+                                        .tile input:checked {
+                                            border: 3px solid #FF5200;
+                                        }
+                                        
+                                        .tile input::after {
+                                            content: "\f111";
+                                            font-family: "FONT AWESOME 5 Free";
+                                            position: absolute;
+                                            font-size: 22px;
+                                            font-weight: 400;
+                                            top: 10px;
+                                            left: 10px;
+                                            color: #E2E6F3;
+                                            transition: 0.3s;
+                                        }
+                                        
+                                        .tile input:checked::after {
+                                            content: "\f058";
+                                            color: #FF5200;
+                                        }
+                                        
+                                        .tile input:hover {
+                                            transform: scale(1.08);
+                                        }
+                                        
+                                        .tile label {
+                                            display: flex;
+                                            flex-direction: column;
+                                            align-items: center;
+                                            justify-content: center;
+                                            gap: 20px;
+                                            height: 35%;
+                                            width: 100%;
+                                            position: absolute;
+                                            bottom: 53px;
+                                            cursor: pointer;
+                                        }
+                                        
+                                        .tile label h6 {
+                                            text-transform: capitalize;
+                                            font-size: 15px;
+                                            color: #7B7B93;
+                                        }
+                                        
+                                        .tile label i {
+                                            font-size: 50px;
+                                            color: #F03353;
+                                        }
+                                        /* todo: CUSTOM CHECKBOX END; */
+                                        /* todo: CUSTOM RANGE SLIDER START; */
+                                        
+                                        #sec13 {
+                                            padding: 50px 0px;
+                                        }
+                                        
+                                        .rsWrapper {
+                                            width: 400px;
+                                            margin: auto;
+                                            border-radius: 5px;
+                                            background: #DBDBDB;
+                                            padding: 50px 15px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: space-around;
+                                        }
+                                        
+                                        .rS {
+                                            -webkit-appearance: none;
+                                            -moz-appearance: none;
+                                            position: relative;
+                                            cursor: pointer;
+                                            display: block;
+                                            width: 75%;
+                                            height: 8px;
+                                            background: #999999;
+                                            border-radius: 8px;
+                                            outline: none;
+                                        }
+                                        
+                                        .rS::-webkit-slider-runnable-track {
+                                            -webkit-appearance: none;
+                                            height: 8px;
+                                        }
+                                        
+                                        .rS::-moz-track {
+                                            -moz-appearance: none;
+                                            height: 8px;
+                                        }
+                                        
+                                        .rS::-ms-track {
+                                            appearance: none;
+                                            height: 8px;
+                                        }
+                                        
+                                        .rS::-webkit-slider-thumb {
+                                            -webkit-appearance: none;
+                                            height: 20px;
+                                            width: 20px;
+                                            background: #F03353;
+                                            border-radius: 50%;
+                                            margin-top: -6px;
+                                            border: none;
+                                        }
+                                        
+                                        .rS::-moz-range-thumb {
+                                            -webkit-appearance: none;
+                                            height: 20px;
+                                            width: 20px;
+                                            background: #F03353;
+                                            border-radius: 50%;
+                                            margin-top: -6px;
+                                            border: none;
+                                        }
+                                        
+                                        .rS::-ms-thumb {
+                                            appearance: none;
+                                            height: 20px;
+                                            width: 20px;
+                                            background: #F03353;
+                                            border-radius: 50%;
+                                            margin-top: -6px;
+                                            border: none;
+                                        }
+                                        
+                                        .rS:active::-webkit-slider-thumb {
+                                            background: #FFFFFF;
+                                            border: 3px solid #FF5200;
+                                        }
+                                        
+                                        .rSValue {
+                                            width: 17%;
+                                            position: relative;
+                                            color: #FFFFFF;
+                                            background: #F03353;
+                                            text-align: center;
+                                            padding: 10px 0px;
+                                            border-radius: 5px;
+                                            cursor: pointer;
+                                        }
+                                        /* todo: CUSTOM RANGE SLIDER END; */
+                                        /* todo: RANDOM PASSWORD START; */
+                                        
+                                        #sec14 {
+                                            padding: 50px 0px;
+                                        }
+                                        
+                                        .randomWrapper {
+                                            width: 500px;
+                                            margin: auto;
+                                            background: #29449c;
+                                            padding: 50px 30px;
+                                            border-radius: 5px;
+                                        }
+                                        
+                                        .randomWrapper h3 {
+                                            color: #F2E1C1;
+                                            padding: 0px 0px 15px 0px;
+                                            font-size: 18px;
+                                            font-style: italic;
+                                            text-align: center;
+                                        }
+                                        
+                                        .randomPass {
+                                            width: 70%;
+                                            background: transparent;
+                                            border: none;
+                                            outline: none;
+                                            border-bottom: 3px solid #1c1e21;
+                                            border-radius: 7px;
+                                            padding: 15px 10px;
+                                            font-family: 'Rubik', sans-serif;
+                                            font-size: 15px;
+                                            color: #F5F5F5;
+                                            letter-spacing: 1px;
+                                        }
+                                        
+                                        .randomWrapper button {
+                                            width: 10%;
+                                            height: 38px;
+                                            background: transparent;
+                                            border: none;
+                                            outline: none;
+                                            color: #FFFFFF;
+                                            font-size: 22px;
+                                            float: right;
+                                            cursor: pointer;
+                                            margin-top: 13px;
+                                        }
+                                        
+                                        #ranPassRange {
+                                            -webkit-appearance: none;
+                                            appearance: none;
+                                            width: 55%;
+                                            height: 3.5px;
+                                            margin-top: 40px;
+                                            background: #E2E2E2;
+                                            border-radius: 3.5px;
+                                            cursor: pointer;
+                                        }
+                                        
+                                        #ranPassRange::-webkit-slider-thumb {
+                                            -webkit-appearance: none;
+                                            appearance: none;
+                                            height: 20px;
+                                            width: 20px;
+                                            background: #07eea1;
+                                            border-radius: 50%;
+                                            border: none;
+                                        }
+                                        
+                                        .randomPassValue {
+                                            display: inline-block;
+                                            width: 10%;
+                                            color: #1c1e21;
+                                            background: #FFFFFF;
+                                            text-align: center;
+                                            padding: 5px 0px;
+                                            margin-left: 3%;
+                                            border-radius: 3px;
+                                            font-size: 16px;
+                                        }
+                                        
+                                        #copyMsg {
+                                            margin-top: 10px;
+                                            display: none;
+                                        }
+                                        
+                                        .ranPassErr {
+                                            padding: 10px 10px;
+                                            display: inline-block;
+                                            color: #000000;
+                                            background: #DBDBDB;
+                                            border-radius: 5px;
+                                            font-size: 15px;
+                                            text-transform: capitalize;
+                                        }
+                                        /* todo: RANDOM PASSWORD END; */
+                                        /* todo: TRIGGER WITH ENTER BUTTON START; */
+                                        
+                                        #sec15 {
+                                            padding: 50px 0px;
+                                        }
+                                        
+                                        .triggerWrapper {
+                                            width: 400px;
+                                            background: #FF5200;
+                                            margin: auto;
+                                            border-radius: 3px;
+                                            padding: 50px 30px;
+                                            text-align: center;
+                                        }
+                                        
+                                        .trgInput {
+                                            width: 85%;
+                                            padding: 30px 15px;
+                                            border: none;
+                                            outline: none;
+                                            color: #FFFFFF;
+                                            background: #222222;
+                                            border-radius: 3px;
+                                        }
+                                        
+                                        .triggerBtn {
+                                            color: #000000;
+                                            background: #3EBDF0;
+                                            width: 40%;
+                                            margin: auto;
+                                            padding: 10px 5px;
+                                            border: none;
+                                            outline: none;
+                                            border-radius: 5px;
+                                            margin-top: 10px;
+                                            text-transform: uppercase;
+                                            font-weight: 600;
+                                            cursor: pointer;
+                                        }
+                                        /* todo: TRIGGER WITH ENTER BUTTON END; */
+                                        /* todo: PHONE NUMBER FIELD START; */
+                                        
+                                        #sec16 {
+                                            padding: 50px 0px;
+                                        }
+                                        
+                                        .phoneWrapper {
+                                            width: 400px;
+                                            background: #FFFFFF0F;
+                                            margin: auto;
+                                            border: 1.5px solid#f0335244;
+                                            border-radius: 3px;
+                                            padding: 50px 30px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: space-around;
+                                        }
+                                        
+                                        #countryCode {
+                                            width: 45%;
+                                            padding: 10px 5px;
+                                            text-transform: uppercase;
+                                            font-size: 12px;
+                                            text-align: center;
+                                            border-radius: 5px;
+                                            cursor: pointer;
+                                            border: none;
+                                            outline: none;
+                                        }
+                                        
+                                        #countryCode option {
+                                            text-transform: uppercase;
+                                            font-size: 12px;
+                                            text-align: center;
+                                            cursor: pointer;
+                                        }
+                                        
+                                        #phone {
+                                            width: 13%;
+                                            padding: 10px 5px;
+                                            text-transform: uppercase;
+                                            font-size: 12px;
+                                            border-radius: 5px 0px 0px 5px;
+                                            border: none;
+                                            outline: none;
+                                        }
+                                        
+                                        #phone1 {
+                                            width: 38%;
+                                            padding: 10px 5px;
+                                            text-transform: uppercase;
+                                            font-size: 12px;
+                                            border-radius: 0px 5px 5px 0px;
+                                            position: relative;
+                                            left: -5px;
+                                            border: none;
+                                            outline: none;
+                                        }
+                                        /* todo: PHONE NUMBER FIELD END; */
+                                        /* todo: AGE CALCULATOR START; */
+                                        
+                                        #sec17 {
+                                            padding: 50px 0px 0px 0px;
+                                        }
+                                        
+                                        .ageWrapper {
+                                            width: 400px;
+                                            margin: auto;
+                                            padding: 50px 30px;
+                                            background: #57837B;
+                                            border-radius: 7px;
+                                        }
+                                        
+                                        .ageWrapper h5 {
+                                            font-size: 20px;
+                                            color: #151313;
+                                            margin-bottom: 15px;
+                                            text-align: center;
+                                            text-transform: capitalize;
+                                        }
+                                        
+                                        .ageWrapper input {
+                                            width: 50%;
+                                            margin-left: 5%;
+                                            padding: 10px 10px;
+                                            border-radius: 3px;
+                                            border: none;
+                                            outline: none;
+                                            cursor: pointer;
+                                        }
+                                        
+                                        .calc {
+                                            width: 30%;
+                                            margin-left: 5%;
+                                            padding: 10px 10px;
+                                            border-radius: 5px;
+                                            border: none;
+                                            outline: none;
+                                            cursor: pointer;
+                                            margin-top: 15px;
+                                            color: #000000;
+                                            background: linear-gradient(115deg, #FF5200, #F03353);
+                                            text-transform: uppercase;
+                                            font-style: italic;
+                                            font-weight: 700;
+                                            transition: 0.3s;
+                                        }
+                                        
+                                        .calc:hover {
+                                            background: linear-gradient(160deg, #F03353, #FF5200);
+                                        }
+                                        
+                                        .ageWrapper input,
+                                        .calc {
+                                            display: inline-block;
+                                        }
+                                        
+                                        .ageResults {
+                                            width: 100%;
+                                            display: flex;
+                                            justify-content: space-between;
+                                            /*  ! FOR GIVE AUTO MARGIN IN THE DIVISIONS */
+                                            align-items: center;
+                                            margin-top: 30px;
+                                        }
+                                        
+                                        .ageResults div {
+                                            background: #222222;
+                                            width: 27%;
+                                            padding: 25px 10px;
+                                            text-align: center;
+                                            border-radius: 10px;
+                                        }
+                                        
+                                        .ageResults div span {
+                                            color: #FFFFFF;
+                                            font-size: 18px;
+                                        }
+                                        
+                                        .ageResults div p {
+                                            color: #FF5200;
+                                            font-size: 15px;
+                                            text-transform: capitalize;
+                                            margin-top: 15px;
+                                        }
+                                        /* todo: AGE CALCULATOR END; */
+                                        /* todo: BACKGROUND VIDEO START; */
+                                        
+                                        #sec18 {
+                                            padding: 0px 0px;
+                                            width: 100%;
+                                            cursor: pointer;
+                                        }
+                                        
+                                        #sec18 video {
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                            /* ! Its very important. it will be need if want to add height in #section or add text over the video */
+                                        }
+                                        /* todo: BACKGROUND VIDEO END; */
+                                        /* todo: ANALOGUE WATCH START; */
+                                        
+                                        #sec19 {
+                                            padding: 0px 0px;
+                                        }
+                                        
+                                        .analogueWatchWrapper {
+                                            width: 550px;
+                                            margin: auto;
+                                            padding: 50px 30px;
+                                            background: #d2e906;
+                                            border-radius: 7px;
+                                        }
+                                        
+                                        .analogueWatchWrapper h5 {
+                                            font-size: 20px;
+                                            color: #064ee9;
+                                            margin-bottom: 15px;
+                                            text-align: center;
+                                            text-transform: capitalize;
+                                            font-style: italic;
+                                            letter-spacing: 1.5px;
+                                            text-decoration: underline 3px solid;
+                                        }
+                                        
+                                        .anlgClock {
+                                            width: 320px;
+                                            height: 320px;
+                                            background: #FFFFFF;
+                                            border-radius: 50%;
+                                            margin: 5% 0px 0px 15%;
+                                            border: 15px solid#6d736d;
+                                            box-sizing: content-box;
+                                            position: relative;
+                                        }
+                                        
+                                        .anlgClock img {
+                                            width: 100%;
+                                            height: 100%;
+                                        }
+                                        
+                                        .hand {
+                                            position: absolute;
+                                            background: #0687dd;
+                                            margin: auto;
+                                            left: 0;
+                                            right: 0;
+                                            border-radius: 5px;
+                                            transform-origin: bottom;
+                                            cursor: pointer;
+                                            z-index: 1;
+                                        }
+                                        
+                                        #angHour {
+                                            height: 65px;
+                                            width: 8px;
+                                            top: 100px;
+                                        }
+                                        
+                                        #angMinute {
+                                            height: 85px;
+                                            width: 4px;
+                                            top: 80px;
+                                        }
+                                        
+                                        #angSeconds {
+                                            height: 95px;
+                                            width: 2.5px;
+                                            top: 70px;
+                                            background: #5727CD;
+                                        }
+                                        
+                                        .angAmPm {
+                                            width: 37px;
+                                            height: 26px;
+                                            background: #333333;
+                                            color: #FFFFFF;
+                                            position: absolute;
+                                            bottom: 15%;
+                                            left: 45%;
+                                            text-transform: uppercase;
+                                            border-radius: 5px;
+                                            padding-top: 3px;
+                                            text-align: center;
+                                            cursor: pointer;
+                                        }
+                                        /* todo: ANALOGUE WATCH END; */
+                                        /* todo: ROUND PROGRESS BAR START; */
+                                        
+                                        #sec20 {
+                                            padding: 50px 0px;
+                                        }
+                                        
+                                        .rndProgressBarWrapper {
+                                            width: 400px;
+                                            margin: auto;
+                                            padding: 50px 30px;
+                                            background: #DCDCDC;
+                                            border-radius: 5px;
+                                        }
+                                        
+                                        .rndProgressBarWrapper h5 {
+                                            font-size: 18px;
+                                            color: #F03353;
+                                            margin-bottom: 15px;
+                                            text-align: center;
+                                            text-transform: capitalize;
+                                        }
+                                        
+                                        .rndProgressBarWrapper h5 span {
+                                            font-size: 16px;
+                                            color: #3EBDF0;
+                                            text-transform: lowercase;
+                                        }
+                                        
+                                        .round {
+                                            width: 100%;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                        }
+                                        
+                                        .roundSkill {
+                                            width: 160px;
+                                            height: 160px;
+                                            position: relative;
+                                        }
+                                        
+                                        .roundOuter {
+                                            width: 160px;
+                                            height: 160px;
+                                            border-radius: 50%;
+                                            padding: 20px;
+                                            box-shadow: 6px 6px 10px -1px #00000026, -6px -6px 10px -1px #ffffffb3;
+                                        }
+                                        
+                                        .roundInner {
+                                            width: 120px;
+                                            height: 120px;
+                                            border-radius: 50%;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            box-shadow: inset 4px 4px 6px -1px #00000033, inset -4px -4px 6px -1px #ffffffb3, -0.5px -0.5px 0px #ffffff, 0.5px 0.5px 0px #00000026, 0px 12px 10px -10px #0000000d;
+                                        }
+                                        
+                                        #roundPrgNmb {
+                                            font-weight: 600;
+                                            color: #555555;
+                                            font-size: 18px;
+                                        }
+                                        
+                                        circle {
+                                            fill: none;
+                                            stroke: url(#GradientColor);
+                                            stroke-width: 20px;
+                                            stroke-dasharray: 472;
+                                            stroke-dashoffset: 472;
+                                            animation: anime 2s linear forwards;
+                                        }
+                                        
+                                        svg {
+                                            position: absolute;
+                                            top: 0px;
+                                            left: 0px;
+                                        }
+                                        
+                                        @keyframes anime {
+                                            100% {
+                                                stroke-dashoffset: 94.4;
+                                                /* ? FOR 80% { 472-(472*0.80) } */
+                                            }
+                                        }
+                                        /* todo: ROUND PROGRESS BAR END; */
+                                        /* todo: LIMIT CHARACTER START; */
+                                        
+                                        #sec21 {
+                                            padding: 50px 0px;
+                                        }
+                                        
+                                        .limWrapper {
+                                            width: 400px;
+                                            margin: auto;
+                                            padding: 50px 30px;
+                                            background: #444444;
+                                            border-radius: 5px;
+                                        }
+                                        
+                                        .limit {
+                                            width: 100%;
+                                            padding: 20px;
+                                            display: block;
+                                            color: #202020;
+                                            border: 2px solid #b2b2b2;
+                                            outline: none;
+                                            border-radius: 5px;
+                                            font-size: 16px;
+                                            text-transform: capitalize;
+                                            resize: none;
+                                            /* ? FOR NOT TO RESIZE */
+                                        }
+                                        
+                                        .limitResult {
+                                            width: 100%;
+                                            text-align: right;
+                                            margin-top: 15px;
+                                            color: #ffffff;
+                                        }
+                                        /* todo: LIMIT CHARACTER END; */
+                                        /* todo: AUTO RESIZE TEXTAREA START; */
+                                        
+                                        #sec22 {
+                                            padding: 50px 0px;
+                                        }
+                                        
+                                        .autoResizeWrapper {
+                                            width: 400px;
+                                            margin: auto;
+                                            padding: 50px 30px;
+                                            background: #CCCCCC;
+                                            border-radius: 7px;
+                                            text-align: center;
+                                        }
+                                        
+                                        .autoResizeWrapper h5 {
+                                            font-size: 16px;
+                                            color: #000000;
+                                            margin-bottom: 15px;
+                                            text-transform: capitalize;
+                                        }
+                                        
+                                        .resize {
+                                            width: 80%;
+                                            font-size: 16px;
+                                            background: #111111;
+                                            color: #FFFFFF;
+                                            padding: 20px;
+                                            text-transform: capitalize;
+                                            border: none;
+                                            outline: none;
+                                            border-radius: 5px;
+                                            resize: none;
+                                        }
+                                        /* todo: AUTO RESIZE TEXTAREA END; */
+                                        /* todo: HIGHLIGHT TEXT START; */
+                                        
+                                        #sec23 {
+                                            padding: 50px 0px;
+                                        }
+                                        
+                                        .highlightWrapper {
+                                            width: 700px;
+                                            margin: auto;
+                                            padding: 50px 30px;
+                                            background: #CCCCCC;
+                                            border-radius: 7px;
+                                            text-align: center;
+                                        }
+                                        
+                                        .highlightWrapper input {
+                                            width: 60%;
+                                            padding: 10px 5px;
+                                            border-radius: 3px;
+                                            border: 1px solid #201d2e;
+                                            outline: none;
+                                        }
+                                        
+                                        .highlightWrapper button {
+                                            width: 20%;
+                                            background-color: #201d2e;
+                                            border: none;
+                                            outline: none;
+                                            cursor: pointer;
+                                            color: #ffffff;
+                                            border-radius: 3px;
+                                            padding: 11px 0px;
+                                            text-transform: capitalize;
+                                        }
+                                        
+                                        .highlightWrapper p {
+                                            line-height: 35px;
+                                            text-align: justify;
+                                            margin-top: 30px;
+                                        }
+                                        
+                                        mark {
+                                            background-color: #f03352b0;
+                                        }
+                                        /* todo: HIGHLIGHT TEXT END; */
+                                        /* todo: ON / OFF TOOGLE START; */
+                                        
+                                        #sec24 {
+                                            padding: 50px 0px;
+                                        }
+                                        
+                                        .onOffWrapper {
+                                            width: 400px;
+                                            margin: auto;
+                                            padding: 50px 30px;
+                                            background: #777777;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            border-radius: 5px;
+                                        }
+                                        
+                                        .onOffWrapper input {
+                                            -webkit-appearance: none;
+                                            appearance: none;
+                                            height: 20px;
+                                            width: 50px;
+                                            background: #db2626;
+                                            border-radius: 50px;
+                                            position: relative;
+                                            margin: auto;
+                                            top: 0;
+                                            bottom: 0;
+                                            left: 0;
+                                            right: 0;
+                                            cursor: pointer;
+                                            outline: none;
+                                            transition: 0.3s;
+                                        }
+                                        
+                                        .onOffWrapper input::before {
+                                            content: "";
+                                            position: absolute;
+                                            height: 20px;
+                                            width: 20px;
+                                            background-color: #333333;
+                                            border-radius: 50%;
+                                            left: 0px;
+                                            top: 0px;
+                                            transition: 0.3s;
+                                        }
+                                        
+                                        .onOffWrapper input::after {
+                                            content: "OFF";
+                                            position: absolute;
+                                            color: #000000;
+                                            font-size: 18px;
+                                            left: 55px;
+                                            top: 0px;
+                                            letter-spacing: 1px;
+                                            transition: 0.3s;
+                                        }
+                                        
+                                        .onOffWrapper input:checked {
+                                            background: #11d87b;
+                                        }
+                                        
+                                        .onOffWrapper input:checked:before {
+                                            background: #BBBBBB;
+                                            left: 30px;
+                                        }
+                                        
+                                        .onOffWrapper input:checked:after {
+                                            content: "ON";
+                                            color: #11d87b;
+                                        }
+                                        /* todo: ON / OFF TOOGLE END; */
+                                        /* todo: GOOGLE TRANSLATE START; */
+                                        
+                                        #sec25 {
+                                            padding: 50px 0px;
+                                        }
+                                        
+                                        .translateWrapper {
+                                            width: 400px;
+                                            margin: auto;
+                                            padding: 50px 30px;
+                                            background: #BBBBBB;
+                                            color: #000000;
+                                            border-radius: 5px;
+                                            text-align: center;
+                                        }
+                                        
+                                        .translateWrapper p,
+                                        .translateWrapper h1 {
+                                            text-transform: capitalize;
+                                            margin: 10px 0px;
+                                        }
+                                        
+                                        #translate select {
+                                            padding: 10px 10px;
+                                            border: none;
+                                            outline: none;
+                                            border-radius: 7px;
+                                            cursor: pointer;
+                                            font-family: 'Rubik', sans-serif;
+                                        }
+                                        /* todo: GOOGLE TRANSLATE END; */
+                                        /* todo: LIVE WORD AND CHARACTER COUNTER START; */
+                                        
+                                        #sec26 {
+                                            padding: 50px 0px;
+                                        }
+                                        
+                                        .liveWrapper {
+                                            width: 400px;
+                                            margin: auto;
+                                            padding: 50px 30px;
+                                            background: #DDDDDD;
+                                            border-radius: 5px;
+                                            text-align: center;
+                                        }
+                                        
+                                        .input_textarea {
+                                            width: 100%;
+                                            border: none;
+                                            resize: none;
+                                            outline: none;
+                                            font-size: 16px;
+                                            line-height: 28px;
+                                            color: #FFFFFF;
+                                            background: #000000;
+                                            padding: 15px 25px;
+                                            border-radius: 3px;
+                                        }
+                                        
+                                        .count {
+                                            background: #bbbbbb;
+                                            width: 80%;
+                                            padding: 20px;
+                                            margin-left: 10%;
+                                            display: flex;
+                                            justify-content: space-around;
+                                            text-align: center;
+                                            border-radius: 5px;
+                                            box-shadow: 0 20px 40px #1e153166;
+                                        }
+                                        
+                                        .count p {
+                                            color: #097051;
+                                            text-transform: capitalize;
+                                        }
+                                        
+                                        .count h5 {
+                                            color: #000000;
+                                            font-size: 23px;
+                                        }
+                                        /* todo: LIVE WORD AND CHARACTER COUNTER END; */
+                                        /* todo: MULTIPLE READ MORE / READ LESS START; */
+                                        
+                                        #sec27 {
+                                            padding: 50px 0px;
+                                        }
+                                        
+                                        .postWrapper {
+                                            width: 900px;
+                                            margin: auto;
+                                            padding: 50px 30px;
+                                            background: #eeeeee;
+                                            border-radius: 7px;
+                                            text-align: justify;
+                                        }
+                                        
+                                        .post {
+                                            width: 95%;
+                                            margin: auto;
+                                        }
+                                        
+                                        .post h1 {
+                                            font-size: 26px;
+                                            color: #f03353;
+                                        }
+                                        
+                                        .post p {
+                                            font-size: 16px;
+                                            color: #000000;
+                                            line-height: 32px;
+                                        }
+                                        
+                                        .post a {
+                                            color: #ff5200;
+                                            cursor: pointer;
+                                        }
+                                        
+                                        .post:not(:last-child) {
+                                            margin-bottom: 50px;
+                                        }
+                                        
+                                        .hide {
+                                            display: none;
+                                        }
+                                        /* todo: MULTIPLE READ MORE / READ LESS END; */
+                                        /* todo: CALENDER START; */
+                                        /* ? src == https://github.com/yusufshakeel/dyCalendarJS */
+                                        
+                                        #sec28 {
+                                            padding: 50px 0px;
+                                        }
+                                        
+                                        .calenderWrapper {
+                                            width: 400px;
+                                            margin: auto;
+                                            padding: 50px 30px;
+                                            background: rgba(255, 255, 255, 0.1);
+                                            box-shadow: 0px 25px 45px rgba(0, 0, 0, 0.1);
+                                            border: 1px solid rgba(255, 255, 255, 0.5);
+                                            border-right: 1px solid rgba(255, 255, 255, 0.2);
+                                            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                                            backdrop-filter: blur(25px);
+                                            border-radius: 7px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: space-around;
+                                        }
+                                        
+                                        .calendar {
+                                            width: 100%;
+                                            padding: 20px;
+                                        }
+                                        
+                                        .calendar table {
+                                            width: 100%;
+                                            margin-top: 40px;
+                                            border-spacing: 5px;
+                                            font-family: 'Poppins', sans-serif;
+                                        }
+                                        
+                                        .calendar table tr:nth-child(1) td {
+                                            background: #ffffff;
+                                            color: #111;
+                                            border-radius: 4px;
+                                            font-weight: 600;
+                                            transition: 0.3s;
+                                        }
+                                        
+                                        .calendar table tr:nth-child(1) td:hover {
+                                            background: #111;
+                                            color: #ffffff;
+                                        }
+                                        
+                                        .calendar table td {
+                                            color: #ffffff;
+                                            padding: 10px;
+                                            cursor: pointer;
+                                            border-radius: 50%;
+                                            transition: 0.3s;
+                                        }
+                                        
+                                        .calendar table td:hover {
+                                            color: #000000;
+                                            background: #00e7ff;
+                                        }
+                                        
+                                        .dycalendar-span-month-year {
+                                            color: #ff5200;
+                                            font-weight: bold;
+                                            font-size: 24px;
+                                        }
+                                        
+                                        .dycalendar-prev-next-btn {
+                                            color: #000000;
+                                            font-size: 18px;
+                                            background: #ffffff;
+                                            width: 35px;
+                                            height: 30px;
+                                            border-radius: 4px;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            font-family: 'Poppins', sans-serif;
+                                        }
+                                        
+                                        .dycalendar-target-date {
+                                            background: #00e7ff !important;
+                                            color: #000000 !important;
+                                            border-radius: 50% !important;
+                                        }
+                                        /* todo: CALENDER END; */
+                                        /* todo: CALCULATOR START; */
+                                        
+                                        #sec29 {
+                                            padding: 50px 0px;
+                                        }
+                                        
+                                        .calculatorWrapper {
+                                            width: 350px;
+                                            margin: auto;
+                                            background: rgba(255, 255, 255, 0.1);
+                                            box-shadow: 0px 25px 45px rgba(0, 0, 0, 0.1);
+                                            border: 1px solid rgba(255, 255, 255, 0.5);
+                                            border-right: 1px solid rgba(255, 255, 255, 0.2);
+                                            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                                            backdrop-filter: blur(25px);
+                                            border-radius: 7px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: space-around;
+                                            overflow: hidden;
+                                            font-family: 'Poppins', sans-serif;
+                                        }
+                                        
+                                        .calculator {
+                                            position: relative;
+                                            display: grid;
+                                            width: 100%;
+                                        }
+                                        
+                                        .calculate {
+                                            grid-column: span 4;
+                                            width: 100%;
+                                            height: 150px;
+                                            text-align: right;
+                                            border: none;
+                                            outline: none;
+                                            padding: 10px;
+                                            font-size: 30px;
+                                            background: transparent;
+                                            color: #ffffff;
+                                            border: 1px solid rgba(255, 255, 255, 0.05);
+                                            border-radius: 3px;
+                                        }
+                                        
+                                        .calculator span {
+                                            display: grid;
+                                            place-items: center;
+                                            width: 87px;
+                                            height: 75px;
+                                            color: #ffffff;
+                                            font-weight: 400;
+                                            cursor: pointer;
+                                            font-size: 20px;
+                                            border: 1px solid rgba(255, 255, 255, 0.05);
+                                            transition: 0.3s;
+                                            text-transform: uppercase;
+                                        }
+                                        
+                                        .calculator span:hover {
+                                            background: rgba(255, 255, 255, 0.05);
+                                        }
+                                        
+                                        .calculator span:active {
+                                            background: #14ff47;
+                                            color: #192f00;
+                                            font-size: 24px;
+                                            font-weight: 500;
+                                        }
+                                        
+                                        .clear {
+                                            background: rgba(255, 255, 255, 0.05);
+                                        }
+                                        
+                                        .plus {
+                                            grid-row: span 2;
+                                            height: 150px !important;
+                                        }
+                                        
+                                        .eql {
+                                            background: rgba(255, 255, 255, 0.05);
+                                        }
+                                        /* todo: CALCULATOR END; */
+                                        /* todo: LIVE WEBSITE VISIT COUNT START; */
+                                        
+                                        #sec30 {
+                                            padding: 50px 0px;
+                                        }
+                                        
+                                        .visitWrapper {
+                                            width: 400px;
+                                            margin: auto;
+                                            background: #111;
+                                            border-radius: 7px;
+                                            text-align: center;
+                                            font-family: 'Poppins', sans-serif;
+                                            padding: 50px 30px;
+                                            color: #eee;
+                                        }
+                                        
+                                        .visitWrapper p {
+                                            text-transform: capitalize;
+                                            font-size: 16px;
+                                        }
+                                        
+                                        .visitWrapper h3 {
+                                            font-size: 26px;
+                                            font-weight: 700;
+                                            margin: 20px 0px;
+                                            color: #0acff1;
+                                        }
+                                        /* ? src video: " https://youtu.be/n8qlr2xpIYo " ; */
+                                        /* todo: LIVE WEBSITE VISIT COUNT END; */
+                                        /* todo: CONTENT BOX HOVER EFFECT START; */
+                                        
+                                        #sec31 {
+                                            padding: 50px 0px;
+                                        }
+                                        
+                                        .sec31Wrapper {
+                                            width: 100%;
+                                            margin: auto;
+                                            padding: 50px 0px;
+                                            border-radius: 7px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: space-around;
+                                        }
+                                        
+                                        .sec31Box {
+                                            width: 350px;
+                                            border-radius: 10px;
+                                            color: #fff;
+                                            position: relative;
+                                            cursor: pointer;
+                                        }
+                                        
+                                        .sec31Icon {
+                                            position: absolute;
+                                            top: 0px;
+                                            left: 0px;
+                                            width: 100%;
+                                            height: 100%;
+                                            transition: 0.5s;
+                                            z-index: 1;
+                                            border-radius: 10px;
+                                            cursor: pointer;
+                                        }
+                                        
+                                        .sec31Wrapper div:first-child {
+                                            background: #319635;
+                                        }
+                                        
+                                        .sec31Wrapper div:first-child div:first-child {
+                                            background: #4caf50;
+                                        }
+                                        
+                                        .sec31Wrapper div:first-child div:last-child {
+                                            background: #319635;
+                                        }
+                                        
+                                        .sec31Wrapper div:nth-child(2) {
+                                            background: #d03852;
+                                        }
+                                        
+                                        .sec31Wrapper div:nth-child(2) div:first-child {
+                                            background: #f54967;
+                                        }
+                                        
+                                        .sec31Wrapper div:nth-child(2) div:last-child {
+                                            background: #d03852;
+                                        }
+                                        
+                                        .sec31Wrapper div:last-child {
+                                            background: #23798e;
+                                        }
+                                        
+                                        .sec31Wrapper div:last-child div:first-child {
+                                            background: #328fa5;
+                                        }
+                                        
+                                        .sec31Wrapper div:last-child div:last-child {
+                                            background: #23798e;
+                                        }
+                                        
+                                        .sec31Box:hover .sec31Icon {
+                                            top: 20px;
+                                            left: calc(50% - 40px);
+                                            /* ? 40px == width / 2 ; */
+                                            width: 80px;
+                                            height: 80px;
+                                            border-radius: 50%;
+                                        }
+                                        
+                                        .sec31Icon i {
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 50%;
+                                            transform: translate(-50%, -50%);
+                                            font-size: 80px;
+                                            transition: 0.5s;
+                                            color: #fff;
+                                        }
+                                        
+                                        .sec31Box:hover .sec31Icon i {
+                                            font-size: 40px;
+                                        }
+                                        
+                                        .sec31Txt {
+                                            width: 100%;
+                                            height: 100%;
+                                            margin-top: 35%;
+                                            margin-bottom: 10%;
+                                            text-align: center;
+                                            text-transform: capitalize;
+                                            transition: 0.5s;
+                                        }
+                                        
+                                        .sec31Txt h3 {
+                                            margin-bottom: 3%;
+                                            font-size: 22px;
+                                            color: #fff;
+                                        }
+                                        
+                                        .sec31Txt p {
+                                            line-height: 30px;
+                                            font-size: 16px;
+                                            width: 90%;
+                                            margin: auto;
+                                        }
+                                        /* todo: CONTENT BOX HOVER EFFECT END; */
+                                        /* todo: REMOVE ARROW FROM NUMBER FELD START; */
+                                        
+                                        #sec32 {
+                                            padding: 50px 0px;
+                                        }
+                                        
+                                        .arrowRemoveWrapper {
+                                            width: 300px;
+                                            margin: auto;
+                                            padding: 50px 0px;
+                                            border-radius: 7px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            background: #3e2c41;
+                                        }
+                                        
+                                        .arrowRemoveWrapper input {
+                                            width: 80%;
+                                            padding: 13px 20px;
+                                            border: none;
+                                            outline: none;
+                                            border-radius: 5px;
+                                            text-transform: capitalize;
+                                            color: #bf1363;
+                                            font-family: 'Poppins', sans-serif;
+                                            font-weight: 500;
+                                            -moz-appearance: textfield;
+                                            /* ? FOR REMOVE ARROW */
+                                        }
+                                        /* ! FOR REMOVE ARROW */
+                                        
+                                        .arrowRemoveWrapper input::-webkit-outer-spin-button,
+                                        .arrowRemoveWrapper input::-webkit-inner-spin-button {
+                                            -webkit-appearance: none;
+                                            margin: 0;
+                                        }
+                                        /* todo: REMOVE ARROW FROM NUMBER FELD END; */
+                                        /* todo: CAPTCHA FELD START; */
+                                        
+                                        #sec33 {
+                                            padding: 50px 0px;
+                                        }
+                                        
+                                        .captchaWrapper {
+                                            font-family: 'Poppins', sans-serif;
+                                            background: #eee;
+                                            width: 450px;
+                                            margin: auto;
+                                            padding: 50px 0px;
+                                            border-radius: 7px;
+                                        }
+                                        
+                                        .captchaWrapper h3 {
+                                            color: #426CF8;
+                                            text-align: center;
+                                            text-transform: uppercase;
+                                            font-weight: 500;
+                                            padding: 15px 0px;
+                                            font-size: 22px;
+                                        }
+                                        
+                                        .captcha-area {
+                                            display: flex;
+                                            height: 65px;
+                                            margin: 30px 0 20px;
+                                            align-items: center;
+                                            justify-content: space-around;
+                                        }
+                                        
+                                        .captcha {
+                                            height: 100%;
+                                            width: 345px;
+                                            user-select: none;
+                                            background: url("bg6.png");
+                                            border-radius: 5px;
+                                            color: #fff;
+                                            font-size: 35px;
+                                            text-align: center;
+                                            letter-spacing: 10px;
+                                            text-shadow: 0px 0px 2px #b1b1b1;
+                                            font-family: 'Noto Serif', serif;
+                                        }
+                                        
+                                        .captchaWrapper button {
+                                            outline: none;
+                                            border: none;
+                                            color: #fff;
+                                            cursor: pointer;
+                                            background: #4db2ec;
+                                            border-radius: 5px;
+                                            transition: all 0.3s ease;
+                                        }
+                                        
+                                        .captchaWrapper button:hover {
+                                            background: #2fa5e9;
+                                        }
+                                        
+                                        .captcha_btn {
+                                            width: 75px;
+                                            height: 100%;
+                                            font-size: 25px;
+                                        }
+                                        
+                                        .captcha_btn i {
+                                            transition: transform 0.3s ease;
+                                        }
+                                        
+                                        .captcha_btn:hover i {
+                                            transform: rotate(15deg);
+                                        }
+                                        
+                                        .captcha_input {
+                                            width: 100%;
+                                            position: relative;
+                                            text-align: center;
+                                        }
+                                        
+                                        .captcha_input input {
+                                            width: 65%;
+                                            height: 100%;
+                                            outline: none;
+                                            font-size: 15px;
+                                            border-radius: 5px;
+                                            border: 1px solid #bfbfbf;
+                                            padding: 10px 10px 10px 20px;
+                                        }
+                                        
+                                        .captcha_input input::placeholder {
+                                            color: #426CF8;
+                                            font-family: 'Poppins', sans-serif;
+                                        }
+                                        
+                                        .check_btn {
+                                            position: absolute;
+                                            right: 83px;
+                                            top: 51%;
+                                            font-size: 17px;
+                                            height: 31px;
+                                            padding: 0 11px;
+                                            transform: translateY(-50%);
+                                            text-transform: capitalize;
+                                        }
+                                        
+                                        .status_text {
+                                            font-size: 18px;
+                                            text-align: center;
+                                            margin: 20px 0 -5px;
+                                            display: none;
+                                        }
+                                        /* todo: CAPTCHA FIELD END; */
+                                        /* todo: AUTOMATIC POP UP START; */
+                                        
+                                        .popup {
+                                            background-color: #ffffff;
+                                            width: 450px;
+                                            padding: 30px 40px;
+                                            border-radius: 8px;
+                                            font-family: "Poppins", sans-serif;
+                                            text-align: center;
+                                            position: fixed;
+                                            transform: translate(-50%, -50%);
+                                            left: 50%;
+                                            top: 50%;
+                                            z-index: 999;
+                                            display: none;
+                                        }
+                                        
+                                        .popup button {
+                                            display: block;
+                                            margin: 0 0 20px auto;
+                                            background-color: transparent;
+                                            font-size: 22px;
+                                            color: #f03353;
+                                            border: none;
+                                            outline: none;
+                                            cursor: pointer;
+                                        }
+                                        
+                                        .popup h2 {
+                                            font-size: 18px;
+                                            margin: 20px 0;
+                                            line-height: 25px;
+                                            text-align: center;
+                                            text-transform: capitalize;
+                                            font-weight: 600;
+                                        }
+                                        
+                                        .popup p {
+                                            font-size: 14px;
+                                            text-align: justify;
+                                            margin: 20px 0;
+                                            line-height: 25px;
+                                        }
+                                        
+                                        .popup a {
+                                            display: block;
+                                            width: 150px;
+                                            margin: 10px auto;
+                                            text-align: center;
+                                            background-color: #0f72e5;
+                                            color: #ffffff;
+                                            text-decoration: none;
+                                            padding: 5px 0px;
+                                            border-radius: 2px;
+                                        }
+                                        /* todo: AUTOMATIC POP UP END; */
+                                        /* todo: WAVY LINE ANIMATION START; */
+                                        
+                                        #sec34 {
+                                            padding: 50px 0px;
+                                        }
+                                        
+                                        .wavyWrapper {
+                                            background: #777;
+                                            width: 200px;
+                                            margin: auto;
+                                            padding: 50px 0px;
+                                            border-radius: 7px;
+                                        }
+                                        
+                                        .wavy {
+                                            position: relative;
+                                            width: 100%;
+                                            height: 50px;
+                                            overflow: hidden;
+                                        }
+                                        
+                                        .wavy::before {
+                                            content: "aaaaaaaaaaaaaaaaaaaa";
+                                            position: absolute;
+                                            font-size: 4em;
+                                            text-decoration: underline 6px wavy #fff;
+                                            top: -42px;
+                                            left: 0px;
+                                            color: transparent;
+                                            animation: wavyanm 1.5s linear infinite;
+                                        }
+                                        
+                                        @keyframes wavyanm {
+                                            0% {
+                                                transform: translateX(-1px);
+                                            }
+                                            100% {
+                                                transform: translateX(-55px);
+                                            }
+                                        }
+                                        /* todo: WAVY LINE ANIMATION END; */
+                                        /* todo: QUIZ LINK START; */
+                                        
+                                        #sec35 {
+                                            padding: 50px 0px;
+                                        }
+                                        
+                                        .qzWrapper {
+                                            background: rgb(255 255 255 / 10%);
+                                            width: 300px;
+                                            margin: auto;
+                                            padding: 50px 0px;
+                                            border-radius: 7px;
+                                            border: 1px solid #fff;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: space-around;
+                                        }
+                                        
+                                        .qzWrapper a {
+                                            width: 150px;
+                                            display: block;
+                                            text-decoration: none;
+                                            background: #3387e6;
+                                            margin: 20px 0px;
+                                            text-align: center;
+                                            padding: 20px 20px;
+                                            border-radius: 7px;
+                                            text-transform: capitalize;
+                                            color: #fff;
+                                        }
+                                        /* todo: QUIZ LINK END; */
+                                        /* todo: GET USER LOCATION START; */
+                                        
+                                        #sec36 {
+                                            padding: 50px 0px;
+                                        }
+                                        
+                                        .locationWrapper {
+                                            background: #f03352;
+                                            width: 750px;
+                                            margin: auto;
+                                            padding: 50px 0px;
+                                            border-radius: 7px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: space-around;
+                                        }
+                                        
+                                        .lctn {
+                                            color: #fff;
+                                            background: #0f72e5;
+                                            text-align: center;
+                                            font-size: 20px;
+                                            letter-spacing: 1px;
+                                            text-transform: capitalize;
+                                            border: none;
+                                            outline: none;
+                                            border-radius: 5px;
+                                            padding: 10px 20px;
+                                            font-family: "Poppins", sans-serif;
+                                            cursor: pointer;
+                                            transition: 0.3s;
+                                        }
+                                        
+                                        .lctn:hover {
+                                            background: #155daf;
+                                        }
+                                        /* todo: GET USER LOCATION END; */
+                                        /* todo: PAGINATION UI DESIGN START; */
+                                        
+                                        #sec37 {
+                                            padding: 50px 0px;
+                                            background: linear-gradient( 180deg, #20b2a2 60%, #f03353 40%);
+                                        }
+                                        
+                                        .paginationWrapper {
+                                            background: rgb(255 255 255 / 10%);
+                                            width: 750px;
+                                            margin: auto;
+                                            padding: 50px 0px;
+                                            border-radius: 7px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: space-around;
+                                            font-family: "Poppins", sans-serif;
+                                            box-shadow: 0px 0px 12px #000;
+                                        }
+                                        
+                                        .pagination ul {
+                                            list-style: none;
+                                            display: flex;
+                                            background: #fff;
+                                            align-items: center;
+                                            justify-content: center;
+                                            padding: 8px;
+                                            border-radius: 50px;
+                                        }
+                                        
+                                        .pagination ul li {
+                                            line-height: 45px;
+                                            text-align: center;
+                                            font-size: 16px;
+                                            font-weight: 500;
+                                            cursor: pointer;
+                                            transition: all 0.3s ease;
+                                            color: #20b2a2;
+                                        }
+                                        
+                                        .pageNumb {
+                                            height: 45px;
+                                            width: 45px;
+                                            margin: 0px 3px;
+                                            border-radius: 50%;
+                                        }
+                                        
+                                        .page {
+                                            padding: 0px 20px;
+                                        }
+                                        
+                                        .pgPrev {
+                                            border-radius: 25px 5px 5px 25px;
+                                        }
+                                        
+                                        .pgNext {
+                                            border-radius: 5px 25px 25px 5px;
+                                        }
+                                        
+                                        .pageDots {
+                                            font-size: 22px !important;
+                                            cursor: default !important;
+                                        }
+                                        
+                                        .numActive,
+                                        .pageNumb:hover,
+                                        .page:hover {
+                                            background: #20b2a2;
+                                            color: #fff !important;
+                                        }
+                                        /* todo: PAGINATION UI DESIGN END; */
+                                        /* todo: NEXT PAGE START; */
+                                        
+                                        #sec38 {
+                                            padding: 50px 0px;
+                                        }
+                                        
+                                        .nextPage {
+                                            background: #fff;
+                                            width: 300px;
+                                            margin: auto;
+                                            padding: 50px 0px;
+                                            border-radius: 7px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: space-around;
+                                        }
+                                        
+                                        .nextPage button {
+                                            background: linear-gradient( 330deg, #f03353 60%, #20b2a2 40%);
+                                            font-size: 18px;
+                                            font-family: "Poppins", sans-serif;
+                                            text-align: center;
+                                            letter-spacing: 1px;
+                                            text-transform: uppercase;
+                                            color: #fff;
+                                            border: none;
+                                            outline: none;
+                                            padding: 15px 50px;
+                                            border-radius: 5px;
+                                            cursor: pointer;
+                                        }
+                                        /* todo: NEXT PAGE END; */
